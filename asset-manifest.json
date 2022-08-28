@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/oleksii_dev_portfolio/static/css/main.0341bfc7.css",
+    "main.js": "/oleksii_dev_portfolio/static/js/main.2100d278.js",
+    "index.html": "/oleksii_dev_portfolio/index.html",
+    "main.0341bfc7.css.map": "/oleksii_dev_portfolio/static/css/main.0341bfc7.css.map",
+    "main.2100d278.js.map": "/oleksii_dev_portfolio/static/js/main.2100d278.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0341bfc7.css",
+    "static/js/main.2100d278.js"
+  ]
+}
