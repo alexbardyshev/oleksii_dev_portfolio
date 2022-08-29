@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/oleksii_dev_portfolio/static/css/main.04938fbe.css",
-    "main.js": "/oleksii_dev_portfolio/static/js/main.183ee043.js",
+    "main.css": "/oleksii_dev_portfolio/static/css/main.9bb1dec2.css",
+    "main.js": "/oleksii_dev_portfolio/static/js/main.c32e94a1.js",
     "static/media/about04.png": "/oleksii_dev_portfolio/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "static/media/about02.png": "/oleksii_dev_portfolio/static/media/about02.7a3df03410ee756268ec.png",
     "static/media/about01.png": "/oleksii_dev_portfolio/static/media/about01.080509de05322b7aafda.png",
@@ -27,11 +27,11 @@
     "static/media/skype.png": "/oleksii_dev_portfolio/static/media/skype.c8d7ee175da5b4c8a8ab.png",
     "index.html": "/oleksii_dev_portfolio/index.html",
     "static/media/circle.svg": "/oleksii_dev_portfolio/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
-    "main.04938fbe.css.map": "/oleksii_dev_portfolio/static/css/main.04938fbe.css.map",
-    "main.183ee043.js.map": "/oleksii_dev_portfolio/static/js/main.183ee043.js.map"
+    "main.9bb1dec2.css.map": "/oleksii_dev_portfolio/static/css/main.9bb1dec2.css.map",
+    "main.c32e94a1.js.map": "/oleksii_dev_portfolio/static/js/main.c32e94a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.04938fbe.css",
-    "static/js/main.183ee043.js"
+    "static/css/main.9bb1dec2.css",
+    "static/js/main.c32e94a1.js"
   ]
 }
