@@ -41,7 +41,7 @@ function Navbar( props ) {
                                 onClick={() => setToggle(false)}
                             />
                             <ul>
-                                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                                {['home', 'about', 'work', 'skills', 'testimonials', 'contact'].map((item) => (
                                     <li key={item}
                                     >
                                         <a
