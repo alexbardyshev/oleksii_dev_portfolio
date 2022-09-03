@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { AppWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
-import { MotionWrap } from '../../wrapper/MotionWrap'
+import { MotionWrap } from '../../wrapper/MotionWrap';
 
 const About = () => {
     const [abouts, setAbouts] = useState([]);
