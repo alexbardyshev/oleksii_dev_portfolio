@@ -31,7 +31,7 @@ function Header( props ) {
                         <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
                             <p className="p-text">
-                                Hello, I am
+                                Hi, I'm
                             </p>
                             <h1 className="head-text">
                                 Oleksii
@@ -39,13 +39,15 @@ function Header( props ) {
                         </div>
                     </div>
 
-                    <div className="tag-cmp app__flex">
-                        <p className="p-text">
-                            Web Developer
-                        </p>
-                        <p className="p-text">
-                            AI Enthusiast
-                        </p>
+                    <div className="app__footer-cards">
+                        <div className="app__footer-card">
+                            <img src={images.resume} alt="resume" />
+                            <a
+                                href="https://drive.google.com/file/d/1kU30EoMweXv7lVibiyYzXbNRfOTvswS3/view?usp=sharing"
+                                target="_blank"
+                                title="View my resume in PDF"
+                                className="p-text">MY RESUME</a>
+                        </div>
                     </div>
 
                 </div>

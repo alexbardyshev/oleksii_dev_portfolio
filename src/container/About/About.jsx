@@ -19,8 +19,7 @@ const About = () => {
 
     return (
         <>
-            <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
-
+            <h2 className="head-text">I Build <span>Great Apps</span> <br />Using This  <span>Stack</span></h2>
             <div className="app__profiles">
                 {abouts.map((about, index) => (
                     <motion.div
@@ -36,6 +35,7 @@ const About = () => {
                     </motion.div>
                 ))}
             </div>
+
         </>
     );
 };
