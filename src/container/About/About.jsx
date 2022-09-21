@@ -5,6 +5,7 @@ import { AppWrap } from '../../wrapper';
 import './About.scss';
 import { urlFor, client } from '../../client';
 import { MotionWrap } from '../../wrapper/MotionWrap';
+import {images} from "../../constants";
 
 const About = () => {
     const [abouts, setAbouts] = useState([]);
@@ -19,7 +20,7 @@ const About = () => {
 
     return (
         <>
-            <h2 className="head-text">I Build <span>Great Apps</span> <br />Using This  <span>Stack</span></h2>
+            <h2 className="head-text">I Build <span>Cool Apps</span> <br />Using This  <span>Stack</span></h2>
             <div className="app__profiles">
                 {abouts.map((about, index) => (
                     <motion.div
@@ -34,6 +35,16 @@ const About = () => {
                         <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
                     </motion.div>
                 ))}
+                <div className="app__footer-cards">
+                    <div className="app__footer-card">
+                        <img src={images.resume} alt="resume" />
+                        <a
+                            href="https://drive.google.com/file/d/1kU30EoMweXv7lVibiyYzXbNRfOTvswS3/view?usp=sharing"
+                            target="_blank"
+                            title="View my resume in PDF"
+                            className="p-text">My Resume</a>
+                    </div>
+                </div>
             </div>
 
         </>

@@ -15,7 +15,7 @@ function Navbar( props ) {
                 <img src={images.logo} alt="Oleksii Bardyshev Portfolio Logo" />
             </div>
             <ul className="app__navbar-links">
-                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                {['home', 'about', 'work', 'contact'].map((item) => (
                     <li
                         className="app__flex p-text"
                         key={`link-${item}`}
