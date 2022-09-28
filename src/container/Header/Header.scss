@@ -1,7 +1,8 @@
 #home {
   position: relative;
-  background: url('../../assets/bgIMG.png');
+  //background: url('../../assets/bgIMG.png');
   background-size: cover;
+  background-color: #bbee00;
   background-repeat: repeat;
   background-position: center;
 
@@ -57,7 +58,8 @@
   flex-direction: column;
 
   .badge-cmp, .tag-cmp {
-    padding: 1rem 2rem;
+    background-color: white;
+    padding: 2rem 4rem;
     border: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
@@ -181,6 +183,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   position: relative;
+  filter: grayscale(0.9);
 
   img {
     width: 100%;

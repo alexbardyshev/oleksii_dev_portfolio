@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import * as THREE from 'three'
 import { motion } from "framer-motion";
 
 import { AppWrap } from '../../wrapper'
@@ -6,84 +7,60 @@ import { AppWrap } from '../../wrapper'
 import { images } from "../../constants";
 
 import './Header.scss';
+import './script';
+import './style.css';
 
-const scaleVariants = {
-    whileInView: {
-        scale: [0, 1],
-        opacity: [0, 1],
-        transition: {
-            duration: 1,
-            ease: 'easeInOut'
-        }
-    }
-}
+function Header() {
+    const mountRef = useRef(null);
 
-function Header( props ) {
+    useEffect(() => {
+
+        const textureLoader = new THREE.TextureLoader();
+        const normalTexture = textureLoader.load('textures/NormalMap.png')
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        mountRef.current.appendChild( renderer.domElement );
+
+        const geometry = new THREE.SphereBufferGeometry(0.7, 64, 64)
+        const material = new THREE.MeshStandardMaterial()
+        material.metalness = 0.7
+        material.roughness = 0.2
+        material.normalMap = normalTexture;
+
+        material.color = new THREE.Color(0x2929292)
+
+        const sphere = new THREE.Mesh(geometry,material)
+        scene.add(sphere)
+
+        // Lights
+
+        const pointLight = new THREE.PointLight(0xffffff, 0.1)
+        pointLight.position.x = 2
+        pointLight.position.y = 3
+        pointLight.position.z = 4
+        scene.add(pointLight)
+
+// Light 2
+
+        const pointLight2 = new THREE.PointLight(0xbbee00, 2)
+        pointLight2.position.set(-1.86, 1, -1.65)
+        pointLight2.intensity = 10
+        scene.add(pointLight2)
+
+        // Light 3
+
+        const pointLight3 = new THREE.PointLight(0xbbee00, 2)
+        pointLight3.position.set(0.69, -3, -1.98)
+        pointLight3.intensity = 6.8
+        scene.add(pointLight3)
+    }, []);
+
     return (
-        <div className="app__header app__flex">
-            <motion.div
-                whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-                transition={{ duration: 1 }}
-                className="app__header-info"
-            >
-                <div className="app__header-badge">
-                    <div className="badge-cmp app__flex">
-                        <span>👋</span>
-                        <div style={{ marginLeft: 20 }}>
-                            <p className="p-text">
-                                Hi, I'm
-                            </p>
-                            <h1 className="head-text">
-                                Oleksii
-                            </h1>
-                        </div>
-                    </div>
-
-                    {/*<div className="app__footer-cards">*/}
-                    {/*    <div className="app__footer-card">*/}
-                    {/*        <img src={images.resume} alt="resume" />*/}
-                    {/*        <a*/}
-                    {/*            href="https://drive.google.com/file/d/1kU30EoMweXv7lVibiyYzXbNRfOTvswS3/view?usp=sharing"*/}
-                    {/*            target="_blank"*/}
-                    {/*            title="View my resume in PDF"*/}
-                    {/*            className="p-text">MY RESUME</a>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-
-                </div>
-            </motion.div>
-
-            <motion.div
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 0.5, delayChildren: 0.5 }}
-                className="app__header-img"
-            >
-                <img src={images.profile} alt="profile_bg"/>
-                <motion.img
-                    whileInView={{ scale: [0, 1] }}
-                    transition={{ duration: 1, ease: "easeInOut" }}
-                    src={images.circle}
-                    alt="profile_circle"
-                    className="overlay_circle"
-                />
-            </motion.div>
-
-            <motion.div
-                variants={scaleVariants}
-                whileInView={scaleVariants.whileInView}
-                className="app__header-circles"
-            >
-                {[images.react, images.javascript, images.sass].map((circle, index) => (
-                    <div
-                        className="circle-cmp app__flex"
-                        key={`circle-${index}`}
-                    >
-                        <img src={circle} alt="circle"/>
-
-                    </div>
-                ))}
-            </motion.div>
-
+        <div ref={mountRef}>
+            <h1>oleksii.dev</h1>
         </div>
     );
 }

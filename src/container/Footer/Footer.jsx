@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
                 <div className="app__footer-card">
                     <img src={images.mobile} alt="phone" />
-                    <a href="https://t.me/oleksiibardyshev" target="_blank" className="p-text">Telegram</a>
+                    <a href="https://t.me/oleksiibardyshev" target="_blank" className="p-text">Telegram @oleksiibardyshevпше </a>
                 </div>
             </div>
             {!isFormSubmitted ? (

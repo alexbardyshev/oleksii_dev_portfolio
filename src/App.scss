@@ -106,8 +106,8 @@
   padding: 1rem;
 
   div {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: var(--white-color);
     margin: 0.25rem 0;
@@ -120,13 +120,14 @@
     transition: all 0.3s ease-in-out;
 
     svg {
+      margin-top: 5px;
       width: 15px;
       height: 15px;
-      color: var(--gray-color);
+      color: var(--black-color);
     }
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--black-color);
       border-color: var(--secondary-color);
 
       svg {

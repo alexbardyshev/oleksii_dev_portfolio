@@ -8,7 +8,7 @@ function App( props ) {
     return (
         <div className="app">
             <Navbar />
-            <Header />
+            {/*<Header />*/}
             <About />
             <Work />
             <Footer />
